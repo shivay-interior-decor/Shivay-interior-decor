@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shivay Interior Decor - Interior design and decor solutions in Karnal, Haryana." />
+  <title>Shivay Interior Decor | Karnal</title>
+  <style>
+    :root{
+      --bg:#0b0b0c; --card:#151516; --text:#f5f2eb; --muted:#b8b4aa;
+      --gold:#d8ad68; --gold2:#f0d39b; --line:rgba(255,255,255,.1);
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(92%,var(--max));margin:auto}
+    header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(11,11,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:20px;font-weight:800;letter-spacing:.08em}.logo span{color:var(--gold)}
+    .links{display:flex;gap:28px;color:#ddd;font-size:14px}
+    .links a:hover{color:var(--gold)}
+    .menu{display:none;background:none;border:0;color:white;font-size:28px}
+    .hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;
+      background:linear-gradient(90deg,rgba(5,5,6,.9),rgba(5,5,6,.52)),url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85") center/cover}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 35%)}
+    .hero-content{position:relative;z-index:2;width:min(92%,var(--max));padding-top:70px}
+    .eyebrow{color:var(--gold2);font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:18px}
+    h1{font-family:Georgia,serif;font-size:clamp(48px,8vw,92px);line-height:.98;max-width:820px;font-weight:500}
+    h1 em{color:var(--gold);font-style:normal}
+    .hero p{max-width:610px;color:#ddd;margin:25px 0 30px;font-size:18px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 20px;border-radius:999px;border:1px solid var(--gold);font-weight:700;font-size:14px}
+    .primary{background:var(--gold);color:#17120a}.secondary{background:rgba(255,255,255,.05)}
+    section{padding:100px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    .section-head h2{font-family:Georgia,serif;font-size:46px;font-weight:500}.section-head p{color:var(--muted);max-width:470px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:20px;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:rgba(216,173,104,.45)}
+    .num{color:var(--gold);font-size:12px;letter-spacing:.15em}.card h3{font-size:22px;margin:18px 0 9px}.card p{color:var(--muted);font-size:14px}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:240px;gap:14px}
+    .gallery img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
+    .gallery .big{grid-row:span 2}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .about-img{height:520px;border-radius:24px;background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85") center/cover}
+    .about h2{font-family:Georgia,serif;font-size:50px;font-weight:500;line-height:1.05;margin:12px 0 20px}.about p{color:var(--muted);margin-bottom:18px}
+    .contact{background:#121214;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-card{padding:32px;border:1px solid var(--line);border-radius:20px;background:#0d0d0f}
+    .contact-card h3{margin-bottom:12px}.contact-card p{color:var(--muted)}.contact-card a{color:var(--gold2)}
+    footer{padding:30px 0;color:#85827b;font-size:13px}.footer-flex{display:flex;justify-content:space-between;gap:20px}
+    .float{position:fixed;right:18px;bottom:18px;z-index:30;background:#25D366;color:white;padding:14px 18px;border-radius:999px;font-weight:800;box-shadow:0 10px 30px #0008}
+    @media(max-width:760px){
+      .links{display:none}.menu{display:block}
+      .hero{min-height:88vh}.hero p{font-size:16px}
+      section{padding:72px 0}.section-head,.about,.contact-box{grid-template-columns:1fr;display:grid}
+      .section-head h2,.about h2{font-size:38px}.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:190px}.gallery .big{grid-row:span 2}
+      .about-img{height:380px}.footer-flex{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="logo" href="#">SHIVAY <span>INTERIOR DECOR</span></a>
+      <div class="links">
+        <a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <button class="menu" onclick="document.querySelector('.links').style.display='flex'">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Interior Design • Karnal, Haryana</div>
+        <h1>Spaces that feel <em>beautiful.</em></h1>
+        <p>Thoughtful interiors, elegant decor and practical design solutions for homes and spaces in Karnal.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://wa.me/918929004111?text=Hello%20Shivay%20Interior%20Decor%2C%20I%20want%20to%20discuss%20an%20interior%20project.">WhatsApp Us</a>
+          <a class="btn secondary" href="#gallery">View Our Work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">What we do</div><h2>Design with purpose.</h2></div>
+          <p>From the first idea to the final detail, create an interior that matches your taste, lifestyle and space.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="num">01</div><h3>Home Interiors</h3><p>Elegant and functional interiors designed around the way you live.</p></div>
+          <div class="card"><div class="num">02</div><h3>Decor & Styling</h3><p>Finishing touches, furniture and decor choices that bring the space together.</p></div>
+          <div class="card"><div class="num">03</div><h3>Custom Solutions</h3><p>Practical design ideas tailored to your room, budget and requirements.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Our style</div><h2>Inspired interiors.</h2></div></div>
+        <div class="gallery">
+          <img class="big" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Elegant interior">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="Modern living room">
+          <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=85" alt="Modern interior decor">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Luxury room">
+          <img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=900&q=85" alt="Interior details">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <div class="about-img"></div>
+        <div>
+          <div class="eyebrow">About Shivay</div>
+          <h2>Your space. Your style. Our design.</h2>
+          <p>Shivay Interior Decor helps turn ordinary rooms into spaces that look refined, comfortable and personal.</p>
+          <p>Visit us at Mugal Canal Road, Sector 13 Extension, Karnal, or get in touch directly on WhatsApp.</p>
+          <a class="btn primary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Let's talk</div><h2>Start your project.</h2></div></div>
+        <div class="contact-box">
+          <div class="contact-card"><h3>Visit Us</h3><p>SCO-86, Mugal Canal Rd, Sector 13 Extension, Sector 13, Karnal, Haryana 132001</p><br><a href="https://www.google.com/maps/search/?api=1&query=SCO-86%2C%20Mugal%20Canal%20Rd%2C%20Sector%2013%20Extension%2C%20Sector%2013%2C%20Karnal%2C%20Haryana%20132001">Open in Google Maps →</a></div>
+          <div class="contact-card"><h3>Call / WhatsApp</h3><p>089290 04111</p><br><a href="tel:+918929004111">Call Now →</a> &nbsp; <a href="https://wa.me/918929004111">WhatsApp →</a><br><br><p>Business hours: Open · Closes 7:30 PM</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="float" href="https://wa.me/918929004111?text=Hello%20Shivay%20Interior%20Decor%2C%20I%20want%20to%20discuss%20an%20interior%20project.">💬 WhatsApp</a>
+
+  <footer><div class="wrap footer-flex"><span>© 2026 Shivay Interior Decor</span><span>Karnal, Haryana</span></div></footer>
+</body>
+</html>
